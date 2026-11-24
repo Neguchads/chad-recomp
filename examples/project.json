@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "project_id": "example-homebrew",
+  "platform": "n64",
+  "mode": "static-aot",
+  "hosts": [
+    "windows-x64",
+    "linux-x64"
+  ],
+  "toolchain": {
+    "name": "N64Recomp",
+    "revision": "EXAMPLE-REPLACE-WITH-PINNED-REVISION"
+  },
+  "fallback": "none",
+  "input_policy": "redistributable"
+}

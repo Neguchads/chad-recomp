@@ -1,0 +1,371 @@
+[
+  {
+    "id": "nes",
+    "name": "NES / Famicom",
+    "cpu": "6502 derivative",
+    "toolchain": "NESRecomp (catalogued)",
+    "evidence": "research",
+    "risks": "Mapper, PPU, timing, APU",
+    "reference": "Mesen"
+  },
+  {
+    "id": "snes",
+    "name": "SNES / Super Famicom",
+    "cpu": "65C816 + SPC700",
+    "toolchain": "snesrecomp; game-specific decomp",
+    "evidence": "research",
+    "risks": "PPU, APU, coprocessors, bank mapping",
+    "reference": "bsnes / Mesen"
+  },
+  {
+    "id": "n64",
+    "name": "Nintendo 64",
+    "cpu": "MIPS VR4300 + RSP",
+    "toolchain": "N64Recomp + N64ModernRuntime + RT64",
+    "evidence": "demonstrated",
+    "risks": "RSP, microcode, overlays, RDP, timing",
+    "reference": "mupen64plus / ares"
+  },
+  {
+    "id": "gamecube",
+    "name": "GameCube",
+    "cpu": "PowerPC Gekko",
+    "toolchain": "DolRecomp / Wiicompiled; decomp-toolkit",
+    "evidence": "research",
+    "risks": "GX, DSP, OS, REL modules",
+    "reference": "Dolphin"
+  },
+  {
+    "id": "wii",
+    "name": "Wii",
+    "cpu": "PowerPC Broadway",
+    "toolchain": "Wiicompiled / DolRecomp / wiikit",
+    "evidence": "research",
+    "risks": "IOS, GX, DSP, motion input, REL",
+    "reference": "Dolphin"
+  },
+  {
+    "id": "wiiu",
+    "name": "Wii U",
+    "cpu": "PowerPC Espresso",
+    "toolchain": "DolRecomp experimental; per-game routes",
+    "evidence": "research",
+    "risks": "GX2, OS, multicore, shaders",
+    "reference": "Cemu"
+  },
+  {
+    "id": "switch",
+    "name": "Nintendo Switch",
+    "cpu": "AArch64",
+    "toolchain": "TotK pipeline / nxrecomp / SwitchRecomp",
+    "evidence": "demonstrated",
+    "risks": "Horizon IPC, NVN, shader translation, NSO relocation",
+    "reference": "Ryujinx (historical reference)"
+  },
+  {
+    "id": "switch2",
+    "name": "Nintendo Switch 2",
+    "cpu": "AArch64",
+    "toolchain": "Per-game research; no general SDK verified",
+    "evidence": "unverified",
+    "risks": "OS, graphics, memory, ABI",
+    "reference": "Not verified"
+  },
+  {
+    "id": "gb",
+    "name": "Game Boy",
+    "cpu": "SM83",
+    "toolchain": "gb-recompiled (catalogued)",
+    "evidence": "research",
+    "risks": "MBC, LCD, timers, APU",
+    "reference": "SameBoy"
+  },
+  {
+    "id": "gbc",
+    "name": "Game Boy Color",
+    "cpu": "SM83",
+    "toolchain": "gb-recompiled (catalogued)",
+    "evidence": "research",
+    "risks": "Banking, color, speed modes",
+    "reference": "SameBoy"
+  },
+  {
+    "id": "gba",
+    "name": "Game Boy Advance",
+    "cpu": "ARM7TDMI ARM/Thumb",
+    "toolchain": "gbarecomp (sp00nznet and mstan)",
+    "evidence": "research",
+    "risks": "DMA, IRQ, BIOS services, PPU, audio",
+    "reference": "mGBA"
+  },
+  {
+    "id": "nds",
+    "name": "Nintendo DS / DSi",
+    "cpu": "ARM9 + ARM7",
+    "toolchain": "ndsrecomp / ndskit",
+    "evidence": "research",
+    "risks": "Dual CPU, overlays, IPC, 2D/3D, touch",
+    "reference": "melonDS"
+  },
+  {
+    "id": "3ds",
+    "name": "Nintendo 3DS",
+    "cpu": "ARM11 + ARM9",
+    "toolchain": "3dsrecomp (catalogued)",
+    "evidence": "research",
+    "risks": "PICA200, service IPC, dual-screen, DSP",
+    "reference": "Citra (historical reference)"
+  },
+  {
+    "id": "virtualboy",
+    "name": "Virtual Boy",
+    "cpu": "NEC V810",
+    "toolchain": "vbrecomp",
+    "evidence": "research",
+    "risks": "VIP, VSU, interrupts, stereo display",
+    "reference": "Mednafen"
+  },
+  {
+    "id": "ps1",
+    "name": "PlayStation",
+    "cpu": "MIPS R3000A",
+    "toolchain": "PSXRecomp / RecompOne / PSXPort",
+    "evidence": "research",
+    "risks": "GTE, GPU, CD, SPU, overlays, BIOS calls",
+    "reference": "DuckStation"
+  },
+  {
+    "id": "ps2",
+    "name": "PlayStation 2",
+    "cpu": "MIPS R5900 + IOP + VU0/VU1",
+    "toolchain": "PS2Recomp / ps2-web-recomp",
+    "evidence": "demonstrated",
+    "risks": "VU microprograms, GS, DMA, IOP, SPU2, FPU semantics",
+    "reference": "PCSX2"
+  },
+  {
+    "id": "ps3",
+    "name": "PlayStation 3",
+    "cpu": "Cell PPE + SPUs",
+    "toolchain": "ps3recomp",
+    "evidence": "research",
+    "risks": "SPU, PPU ABI, RSX, syscalls, threads",
+    "reference": "RPCS3"
+  },
+  {
+    "id": "ps4",
+    "name": "PlayStation 4",
+    "cpu": "x86-64",
+    "toolchain": "bbport / game-specific native runtime",
+    "evidence": "research",
+    "risks": "Orbis ABI, GPU command streams, OS APIs",
+    "reference": "shadPS4"
+  },
+  {
+    "id": "ps5",
+    "name": "PlayStation 5",
+    "cpu": "x86-64",
+    "toolchain": "Per-game research; no general SDK verified",
+    "evidence": "unverified",
+    "risks": "Platform ABI, GPU, system services",
+    "reference": "Not verified"
+  },
+  {
+    "id": "psp",
+    "name": "PSP",
+    "cpu": "MIPS Allegrex",
+    "toolchain": "psprecomp",
+    "evidence": "research",
+    "risks": "VFPU, GE, kernel, threading, imports",
+    "reference": "PPSSPP"
+  },
+  {
+    "id": "vita",
+    "name": "PS Vita",
+    "cpu": "ARM Cortex-A9",
+    "toolchain": "Game-specific research; no general SDK verified",
+    "evidence": "unverified",
+    "risks": "GXM, imports, OS, NEON",
+    "reference": "Vita3K"
+  },
+  {
+    "id": "xbox",
+    "name": "Xbox",
+    "cpu": "x86",
+    "toolchain": "XboxXBERecomp / XboxRecomp (catalogued)",
+    "evidence": "research",
+    "risks": "XBE loader, kernel exports, NV2A, x86 ABI",
+    "reference": "xemu / Cxbx-Reloaded"
+  },
+  {
+    "id": "xbox360",
+    "name": "Xbox 360",
+    "cpu": "PowerPC Xenon",
+    "toolchain": "XenonRecomp + XenosRecomp / ReXGlue",
+    "evidence": "demonstrated",
+    "risks": "VMX128, XEX, Xenos, kernel, endian, atomics",
+    "reference": "Xenia"
+  },
+  {
+    "id": "xboxone",
+    "name": "Xbox One",
+    "cpu": "x86-64",
+    "toolchain": "No general SDK verified",
+    "evidence": "unverified",
+    "risks": "System ABI, sandbox, graphics, services",
+    "reference": "Not verified"
+  },
+  {
+    "id": "xboxseries",
+    "name": "Xbox Series",
+    "cpu": "x86-64",
+    "toolchain": "No general SDK verified",
+    "evidence": "unverified",
+    "risks": "System ABI, graphics, services",
+    "reference": "Not verified"
+  },
+  {
+    "id": "mastersystem",
+    "name": "Master System / Game Gear",
+    "cpu": "Z80",
+    "toolchain": "smsggrecomp",
+    "evidence": "research",
+    "risks": "VDP, PSG, mapper, timing",
+    "reference": "Gearsystem"
+  },
+  {
+    "id": "genesis",
+    "name": "Mega Drive / Genesis / Sega CD",
+    "cpu": "68000 + Z80; Sega CD extra CPU",
+    "toolchain": "SegaGenesisRecomp (catalogued)",
+    "evidence": "research",
+    "risks": "VDP, audio, bank switching; CD timing",
+    "reference": "Genesis Plus GX"
+  },
+  {
+    "id": "32x",
+    "name": "Sega 32X",
+    "cpu": "68000 + dual SH-2 + Z80",
+    "toolchain": "Per-game research; no general SDK verified",
+    "evidence": "unverified",
+    "risks": "Multi-CPU synchronization, framebuffer, audio",
+    "reference": "ares"
+  },
+  {
+    "id": "saturn",
+    "name": "Sega Saturn",
+    "cpu": "Dual SH-2 + 68000",
+    "toolchain": "saturnkit / SaturnRecomp",
+    "evidence": "research",
+    "risks": "VDP1/2, SCU/DSP, SCSP, CD, dual CPU",
+    "reference": "Mednafen / Kronos"
+  },
+  {
+    "id": "dreamcast",
+    "name": "Dreamcast / NAOMI",
+    "cpu": "SH-4 + ARM7 sound CPU",
+    "toolchain": "dcrecomp / KatanaRecomp",
+    "evidence": "research",
+    "risks": "PowerVR, GD-ROM, Maple, AICA, MMU",
+    "reference": "Flycast"
+  },
+  {
+    "id": "neogeo",
+    "name": "Neo Geo AES/MVS",
+    "cpu": "68000 + Z80",
+    "toolchain": "neogeorecomp",
+    "evidence": "research",
+    "risks": "Sprite hardware, banks, BIOS services, sound",
+    "reference": "MAME / FBNeo"
+  },
+  {
+    "id": "arcade",
+    "name": "Arcade (multiple boards)",
+    "cpu": "Board-specific",
+    "toolchain": "Per-board adapters; no universal CPU or runtime",
+    "evidence": "unverified",
+    "risks": "Board, firmware, protection, timing, peripherals",
+    "reference": "MAME"
+  },
+  {
+    "id": "pce",
+    "name": "PC Engine / TurboGrafx-16",
+    "cpu": "HuC6280",
+    "toolchain": "Per-game research",
+    "evidence": "unverified",
+    "risks": "VDC, audio, bank mapping, CD expansion",
+    "reference": "Mednafen"
+  },
+  {
+    "id": "atari2600",
+    "name": "Atari 2600",
+    "cpu": "6507",
+    "toolchain": "Per-game research",
+    "evidence": "unverified",
+    "risks": "TIA cycle timing, RIOT, banks",
+    "reference": "Stella"
+  },
+  {
+    "id": "lynx",
+    "name": "Atari Lynx",
+    "cpu": "65SC02",
+    "toolchain": "lynxrecomp (family reference)",
+    "evidence": "research",
+    "risks": "Mikey, Suzy, timing",
+    "reference": "Mednafen"
+  },
+  {
+    "id": "jaguar",
+    "name": "Atari Jaguar",
+    "cpu": "68000 + GPU/DSP",
+    "toolchain": "Per-game research",
+    "evidence": "unverified",
+    "risks": "RISC coprocessors, object processor",
+    "reference": "BigPEmu (reference only)"
+  },
+  {
+    "id": "3do",
+    "name": "3DO",
+    "cpu": "ARM60",
+    "toolchain": "Per-game research",
+    "evidence": "unverified",
+    "risks": "CEL rendering, DSP, OS services",
+    "reference": "Opera"
+  },
+  {
+    "id": "cdi",
+    "name": "CD-i",
+    "cpu": "68000 family",
+    "toolchain": "Per-game research",
+    "evidence": "unverified",
+    "risks": "OS-9, video, input",
+    "reference": "MAME"
+  },
+  {
+    "id": "dos",
+    "name": "PC DOS",
+    "cpu": "x86",
+    "toolchain": "pcrecomp",
+    "evidence": "research",
+    "risks": "Real/protected mode, DOS interrupts, VGA, audio",
+    "reference": "DOSBox-X"
+  },
+  {
+    "id": "windows",
+    "name": "Legacy Windows",
+    "cpu": "x86 / x86-64",
+    "toolchain": "pcrecomp / recomp-kit; API compatibility",
+    "evidence": "research",
+    "risks": "PE imports, Win32, DirectX, ABI",
+    "reference": "Wine (compatibility layer)"
+  },
+  {
+    "id": "other",
+    "name": "Other / custom platform",
+    "cpu": "Project-defined",
+    "toolchain": "Custom adapter",
+    "evidence": "unverified",
+    "risks": "Document CPU, ABI, firmware and peripherals",
+    "reference": "Project-defined"
+  }
+]

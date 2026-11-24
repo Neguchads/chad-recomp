@@ -1,0 +1,2 @@
+# Agent instructions
+Read docs/STANDARD.md and docs/ADAPTERS.md before editing. Keep claims grounded in tested evidence. Do not import proprietary game content or relicense third-party code. Use `python tools/validate.py examples/project.json` and `python -m unittest discover -s tests -v`. Update schemas, registry, tests and docs together. Do not invent tool flags or unsupported platform support. Report failures and unresolved issues. No automatic publication of game artifacts.

@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CSR project manifest 0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "platform",
+    "mode",
+    "hosts",
+    "toolchain",
+    "fallback",
+    "input_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "nes",
+        "snes",
+        "n64",
+        "gamecube",
+        "wii",
+        "wiiu",
+        "switch",
+        "switch2",
+        "gb",
+        "gbc",
+        "gba",
+        "nds",
+        "3ds",
+        "virtualboy",
+        "ps1",
+        "ps2",
+        "ps3",
+        "ps4",
+        "ps5",
+        "psp",
+        "vita",
+        "xbox",
+        "xbox360",
+        "xboxone",
+        "xboxseries",
+        "mastersystem",
+        "genesis",
+        "32x",
+        "saturn",
+        "dreamcast",
+        "neogeo",
+        "arcade",
+        "pce",
+        "atari2600",
+        "lynx",
+        "jaguar",
+        "3do",
+        "cdi",
+        "dos",
+        "windows",
+        "other",
+        "original"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "static-aot",
+        "decomp-port",
+        "native-compat",
+        "hybrid",
+        "emulator",
+        "original"
+      ]
+    },
+    "hosts": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "windows-x64",
+          "windows-arm64",
+          "linux-x64",
+          "linux-arm64",
+          "macos-arm64",
+          "macos-x64",
+          "android-arm64",
+          "ios-arm64",
+          "wasm32",
+          "other"
+        ]
+      }
+    },
+    "toolchain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "revision"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "fallback": {
+      "enum": [
+        "none",
+        "interpreter",
+        "jit",
+        "mixed",
+        "not-applicable"
+      ]
+    },
+    "input_policy": {
+      "enum": [
+        "authorized-local",
+        "redistributable",
+        "original-content"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "static-aot"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "fallback": {
+            "const": "none"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "original"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "platform": {
+            "const": "original"
+          },
+          "fallback": {
+            "const": "not-applicable"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "platform": {
+            "const": "original"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "mode": {
+            "const": "original"
+          }
+        }
+      }
+    }
+  ]
+}
