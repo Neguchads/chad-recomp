@@ -4,6 +4,7 @@ name = "chad-recomp"
 visibility = "public"
 maturity = "experimental"
 profile = "python-tooling"
+architecture_profile = "documentation"
 [verification]
 require_real_tests = true
 timeout_seconds = 900
@@ -11,4 +12,4 @@ timeout_seconds = 900
 public_export = false
 [agents]
 approval_for_production = true
-parallel_workers = 2
+parallel_workers = 1

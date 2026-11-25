@@ -19,3 +19,5 @@ The repository contains the normative draft, platform registry, adapter design, 
 ## Constraints and rollback
 
 Do not move existing folders to match a reference layout. Do not add proprietary inputs, game binaries or claims without verification. Revert only the reviewed documentation integration if needed; original CI and source layout remain intact.
+
+NEF follow-up: the complementary gate now proposes a pinned Core upgrade and reference audit with no file changes. Check the corresponding pull request CI before reporting success.
