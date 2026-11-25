@@ -1,2 +1,4 @@
 # Agent instructions
 Read docs/STANDARD.md and docs/ADAPTERS.md before editing. Keep claims grounded in tested evidence. Do not import proprietary game content or relicense third-party code. Use `python tools/validate.py examples/project.json` and `python -m unittest discover -s tests -v`. Update schemas, registry, tests and docs together. Do not invent tool flags or unsupported platform support. Report failures and unresolved issues. No automatic publication of game artifacts.
+
+For nontrivial tasks, read ROADMAP.md and docs/HANDOFF.md. Clarify material ambiguity before implementation; document acceptance and actual test evidence. Preserve the existing repository layout and use the optional provider-neutral NEF references in docs/NEF.md. Do not require multiple agents or store raw user prompts. Update handoff at session boundaries.

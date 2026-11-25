@@ -26,3 +26,7 @@ Copy `examples/project.json` to your game's root as `csr.project.json`; choose a
 ## Status
 
 This release contains a normative draft, research registry, manifest schema, CLI validator, tests, CI and project templates. Real console adapters, automatic translation, runtime libraries and game certification are not implemented.
+
+## Optional engineering assistance
+
+[Architecture](docs/ARCHITECTURE.md) · [Handoff](docs/HANDOFF.md) · [NAVI Engineering Framework references](docs/NEF.md). The original CSR layout and verification remain independent of any agent.

@@ -1,0 +1,10 @@
+{
+  "overview": "README.md",
+  "architecture": "docs/ARCHITECTURE.md",
+  "roadmap": "ROADMAP.md",
+  "handoff": "docs/HANDOFF.md",
+  "contributing": "CONTRIBUTING.md",
+  "security": "SECURITY.md",
+  "changelog": "CHANGELOG.md",
+  "license": "LICENSE"
+}

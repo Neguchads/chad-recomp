@@ -7,3 +7,7 @@
 - [ ] v1.0 conformance criteria validated across multiple distinct platforms.
 
 No compatibility or schedule is guaranteed by this roadmap.
+
+## Optional NEF adoption
+
+Use the existing roadmap and architecture references with the optional NEF mapping. Keep the original validator gate and domain-specific CSR requirements. Record handoff and evidence before reporting completion. This does not certify console support or require an AI provider.
