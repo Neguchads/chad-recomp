@@ -10,6 +10,36 @@ concurrency:
   cancel-in-progress: true
 jobs:
   verify:
-    uses: Neguchads/navi-core/.github/workflows/reusable-ci.yml@e9fa2e4c825615ddc6f0a24b65d7139ec38fc477
+    uses: Neguchads/navi-core/.github/workflows/reusable-ci.yml@c952bb80f33b3eee31de9a717298095154e1fd22
     with:
-      core_sha: e9fa2e4c825615ddc6f0a24b65d7139ec38fc477
+      core_sha: c952bb80f33b3eee31de9a717298095154e1fd22
+
+  nef-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          path: project
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: Neguchads/navi-core
+          ref: c952bb80f33b3eee31de9a717298095154e1fd22
+          persist-credentials: false
+          path: core
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.13'
+      - name: Install reviewed Core
+        run: |
+          python -m pip install -r core/requirements-ci.txt
+          python -m pip install --no-build-isolation --no-deps ./core
+          python -m pip check
+      - name: Inspect references and preview migration
+        run: |
+          navi audit --root project --mapping project/docs/NEF_REFERENCES.json
+          navi migrate --root project --mapping project/docs/NEF_REFERENCES.json
+          git -C project diff --exit-code

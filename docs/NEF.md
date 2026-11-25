@@ -19,3 +19,5 @@ For any compatible agent, export public reference instructions with:
 For implementation tasks, clarify material ambiguities, record acceptance and maintain the handoff. Learn only from explicitly approved sanitized lessons outside Git. Never publish private prompts, source, game inputs, credentials or logs. NEF is optional; the CSR validator runs without it.
 
 Framework: https://github.com/Neguchads/navi-core
+
+The complementary NAVI pilot runs a read-only reference audit and migration preview on the reviewed Core revision. The manifest selects documentation architecture separately from Python verification. No automatic layout changes or required AI credentials.
