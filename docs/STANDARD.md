@@ -9,6 +9,8 @@ MUST = mandatory for the applicable profile; SHOULD = recommended with documente
 ## CSR-01 Governance
 MUST include README, license scope, third-party notices, contribution instructions, supported input versions, known limitations and build instructions. Use SPDX identifiers. Do not relicense upstream code. Document provenance of generated and recovered code. Do not commit private game dumps, keys, firmware or unlicensed assets.
 
+Optional distribution branding SHOULD follow [the official press badge convention](PRESS-BADGES.md) where applicable; a developer badge is not a conformance or release certification.
+
 ## CSR-02 Input and reproducibility
 MUST identify authorized inputs by revision, size and SHA-256; reject mismatched inputs before generation. Pin toolchain revisions and dependency lockfiles. Record host OS, compiler, flags and generated output hashes. Separate immutable source/install from writable data. Use synthetic or redistributable fixtures in public CI.
 

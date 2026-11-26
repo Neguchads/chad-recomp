@@ -1,7 +1,9 @@
 # GAME NAME
 
 [Banner / permitted artwork]
-[Release] · [Build status] · [License] · [RecompLauncher listing if verified]
+[Release] · [Build status] · [License]
+
+[Optional official launcher and verified developer badges — for confirmed listings and verified maintainers only](PRESS-BADGES.md)
 
 ## Overview
 Describe the actual execution mode and scope.

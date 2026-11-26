@@ -30,3 +30,5 @@ This release contains a normative draft, research registry, manifest schema, CLI
 ## Optional engineering assistance
 
 [Architecture](docs/ARCHITECTURE.md) · [Handoff](docs/HANDOFF.md) · [NAVI Engineering Framework references](docs/NEF.md). The original CSR layout and verification remain independent of any agent.
+
+[Optional RecompLauncher/RecompStore press badge convention](docs/PRESS-BADGES.md).

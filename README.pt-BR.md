@@ -10,3 +10,5 @@ Execute `python tools/validate.py examples/project.json` e `python -m unittest d
 ## Apoio de engenharia opcional
 
 [Arquitetura](docs/ARCHITECTURE.md) · [Handoff](docs/HANDOFF.md) · [Referências NEF](docs/NEF.md). Nenhum agente de IA ou ferramenta NAVI é obrigatório para executar o validador CSR.
+
+[Padrão opcional de selos oficiais RecompLauncher/RecompStore](docs/PRESS-BADGES.md).
